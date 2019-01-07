@@ -10,7 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Usuario;
 
-public class UsuarioDaoImpl implements UsuarioDao {
+public class UsuarioDaoImpl extends ConexaoBD implements UsuarioDao {
     
     private Connection con;
     private PreparedStatement pst;
@@ -21,7 +21,7 @@ public class UsuarioDaoImpl implements UsuarioDao {
         con = new ConexaoBD().conectandoBanco();
     }
 
-    @Override
+   @Override
     public boolean inserir(Usuario usuario) {
         String sql = "INSERT INTO usuario(nome,ra,senha) VALUES(?,?,?)";
         
@@ -34,7 +34,7 @@ public class UsuarioDaoImpl implements UsuarioDao {
             pst.close();
         
             return true;
-            
+        
         }catch(Exception ex){
             Logger.getLogger(UsuarioDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -56,4 +56,49 @@ public class UsuarioDaoImpl implements UsuarioDao {
         }
         return false;
     }
+    
+    @Override
+    public Usuario findByNomeUsuario(String nome, String senha){
+        
+        String sql = "SELECT * FROM usuario WHERE nome = ? senha = ?";
+        
+        Usuario usuario = null;
+        
+        try{
+            this.pst = this.con.prepareStatement(sql);
+            this.pst.setString(1, nome);
+            this.pst.setString(2, senha);
+            this.rs = this.pst.executeQuery();
+            
+            while(this.rs.next()){
+                usuario.setId(this.rs.getInt("id"));
+                usuario.setNome(this.rs.getString("nome"));
+                usuario.setRa(this.rs.getString("ra"));
+                usuario.setSenha(this.rs.getString("senha"));
+            }
+            this.fechaBanco(con, pst, rs);
+            
+    }catch(Exception e){
+        System.out.print("\nerro ao encontrar usuario pelo nome");
+        this.fechaBanco(con, pst, rs);
+        }
+        return usuario;
+    }
+        
+    @Override
+    public Usuario findByRa(String ra) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  

@@ -41,7 +41,7 @@ public class Cadastro extends HttpServlet {
        }
         else {
             request.setAttribute("erroNoCadastro", 1);
-            sc.getRequestDispatcher("/jsp/index.jsp").forward(request, response);
+            sc.getRequestDispatcher("/jsp/cadastro.jsp").forward(request, response);
         }
     }
 }

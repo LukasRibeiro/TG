@@ -28,7 +28,7 @@ public class Excluir extends HttpServlet {
     excluirUsuario = new UsuarioDaoImpl();
     
     boolean status = false;
-    excluirUsuario.Excluir(usuario);
+    //excluirUsuario.Excluir(usuario);
     
     if(status){
             sc.getRequestDispatcher("/jsp/index.jsp").forward(request, response);

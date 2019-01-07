@@ -7,9 +7,9 @@
     </head>
     <body>
         <div>
-            <form action="/">
+            <form action="/Login" method="POST">
                 name: <input type="text" name="nome" value=""><br>
-                senha: <input type="text" name="senha" value=""><br>
+                senha: <input type="password" name="senha" value=""><br>
                 <input type="submit" value="Submit">
                 
                 <p class="text-center">Nao possui uma conta, então
