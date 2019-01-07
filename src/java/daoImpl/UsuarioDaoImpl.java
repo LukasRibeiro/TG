@@ -42,7 +42,7 @@ public class UsuarioDaoImpl implements UsuarioDao {
     }
 
     @Override
-    public boolean Excluir(double RA) {
+    public boolean Excluir(Usuario usuario) {
         String sql = "DELETE FROM usuario WHERE ra = ?";
         
         try{

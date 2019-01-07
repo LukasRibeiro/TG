@@ -4,5 +4,5 @@ import model.Usuario;
 
 public interface UsuarioDao {
     public boolean inserir(Usuario usuario);
-    public boolean Excluir(double RA);
+    public boolean Excluir(Usuario usuario);
 }

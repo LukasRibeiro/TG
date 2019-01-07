@@ -19,6 +19,7 @@ public class Cadastro extends HttpServlet {
         
         ServletContext sc = request.getServletContext();
         
+        //pega o valor inserido no formulario
         String nome = request.getParameter("nome");
         String ra = request.getParameter("ra");
         String senha = request.getParameter("senha");
@@ -26,6 +27,7 @@ public class Cadastro extends HttpServlet {
         UsuarioDao novoUsuario;
         novoUsuario = new UsuarioDaoImpl();
         
+        //seta o valor do formulario na variavel
         Usuario usuario = new Usuario();
         usuario.setNome(nome);
         usuario.setRa(ra);
