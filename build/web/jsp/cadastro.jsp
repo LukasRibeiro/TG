@@ -7,12 +7,12 @@
     </head>
     <body>
         <div>
-            <form action="/cadastro" metohod = "POST">
-                name: <input type="text" name="name" value=""><br>
+            <form action="/cadastro" method = "POST">
+                name: <input type="text" name="nome" value=""><br>
                 ra: <input type="text" name="ra" value=""><br>
-                senha: <input type="text" name="senha" value=""><br>
+                senha: <input type="password" name="senha" value=""><br>
                 
-                <input type="submit" value="Submit">
+                <button type="submit">Cadastrar</button>
             </form>
         </div>
     </body>

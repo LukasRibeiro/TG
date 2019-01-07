@@ -1,3 +1,9 @@
+<%-- 
+    Document   : excluir
+    Created on : 07/01/2019, 16:18:36
+    Author     : Lucas Ribeiro
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -6,13 +12,11 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <div>
-            <form action="/cadastro" method = "POST">
-                name: <input type="text" name="nome" value=""><br>
+         <div>
+            <form action="/Excluir" method = "POST">
                 ra: <input type="text" name="ra" value=""><br>
-                senha: <input type="password" name="senha" value=""><br>
                 
-                <button type="submit">Cadastrar</button>
+                <button type="submit">excluir</button>
             </form>
         </div>
     </body>
