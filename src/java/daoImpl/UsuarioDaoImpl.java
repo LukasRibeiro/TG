@@ -58,23 +58,23 @@ public class UsuarioDaoImpl extends ConexaoBD implements UsuarioDao {
     }
     
     @Override
-    public Usuario findByNomeUsuario(String nome, String senha){
+    public boolean findByNomeUsuario(Usuario usuario){
         
-        String sql = "SELECT * FROM usuario WHERE nome = ? senha = ?";
-        
-        Usuario usuario = null;
+        String sql = "SELECT * FROM usuario WHERE nome = ? and senha = ?";
         
         try{
-            this.pst = this.con.prepareStatement(sql);
-            this.pst.setString(1, nome);
-            this.pst.setString(2, senha);
-            this.rs = this.pst.executeQuery();
+            pst = this.con.prepareStatement(sql);
+            pst.setString(1, usuario.getNome());
+            pst.setString(2, usuario.getSenha());
+            rs = this.pst.executeQuery();
             
-            while(this.rs.next()){
-                //usuario.setId(this.rs.getInt("id"));
+            while(rs.next()){
+                return true;
+                /*
+                usuario.setId(this.rs.getInt("id"));
                 usuario.setNome(this.rs.getString("nome"));
-                //usuario.setRa(this.rs.getString("ra"));
-                usuario.setSenha(this.rs.getString("senha"));
+                usuario.setRa(this.rs.getString("ra"));
+                usuario.setSenha(this.rs.getString("senha")); */
             }
             this.fechaBanco(con, pst, rs);
             
@@ -82,7 +82,7 @@ public class UsuarioDaoImpl extends ConexaoBD implements UsuarioDao {
         System.out.print("\nerro ao encontrar usuario pelo nome");
         this.fechaBanco(con, pst, rs);
         }
-        return usuario;
+        return false;
     }
         
     @Override
