@@ -17,6 +17,7 @@ and open the template in the editor.
     
     <display-name>TG</display-name>
     
+    <!--Servlet de inicializacao-->
     <servlet>
         <servlet-name>index</servlet-name>
         <servlet-class>controller.index</servlet-class>
@@ -24,7 +25,6 @@ and open the template in the editor.
     
     <servlet-mapping>
         <servlet-name>index</servlet-name>
-        <url-pattern></url-pattern>
+        <url-pattern>/index</url-pattern>
     </servlet-mapping>
-    
 </web-app>

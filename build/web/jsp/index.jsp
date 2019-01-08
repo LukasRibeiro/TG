@@ -3,21 +3,38 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="<c:url value=../css/bootstrap.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="../css/meuEstilo.css">
+        <title>Seja bem vindo - Login</title>
     </head>
     <body>
-        <div>
-            <form action="/Login" method="POST">
-                name: <input type="text" name="nome" value=""><br>
-                senha: <input type="password" name="senha" value=""><br>
-                <input type="submit" value="Submit">
+        <div class="container">
+            <form class="col-md-6 offset-md-3 jumbotron mt-5" action="/login" method="POST">
+                
+                <div class="form-group">
+                    <!-- Nome de usuario-->
+                    <label>Usuario:</label>
+                    <input type="text" class="form-control" name="nome" placeholder="Nome">
+                </div>
+
+                <div class="form-group">
+                    <!-- senha-->
+                    <label>Senha:</label>
+                    <input type="password" class="form-control" name="senha" placeholder="Senha">
+                </div>
+                
+                <center>
+                    <button class="botao mt-3" type="submit">Acessar</button>
+                </center>
                 
                 <p class="text-center">Nao possui uma conta, então
                     <a id="cadastro" href="/cadastro">Cadastre-se!</a>
                 </p>
                 
                 <p class="text-center"> deseja excluir sua conta,
-                    <a id="excluir" href="/Excluir">clique aqui</a>
+                    <a id="excluir" href="/excluir">clique aqui</a>
                 </p>
             </form>
         </div>

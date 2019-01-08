@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.Usuario;
 
-@WebServlet(urlPatterns = {"/Excluir"})
+@WebServlet(urlPatterns = {"/excluir"})
 public class Excluir extends HttpServlet {
 
     @Override
