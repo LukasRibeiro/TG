@@ -13,11 +13,11 @@
                 <input type="submit" value="Submit">
                 
                 <p class="text-center">Nao possui uma conta, então
-                    <a id="novologin" href="">Cadastre-se!</a>
+                    <a id="cadastro" href="/cadastro">Cadastre-se!</a>
                 </p>
                 
                 <p class="text-center"> deseja excluir sua conta,
-                    <a id="excluir" href="">clique aqui</a>
+                    <a id="excluir" href="/Excluir">clique aqui</a>
                 </p>
             </form>
         </div>

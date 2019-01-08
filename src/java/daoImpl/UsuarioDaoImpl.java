@@ -46,9 +46,11 @@ public class UsuarioDaoImpl extends ConexaoBD implements UsuarioDao {
         String sql = "DELETE FROM usuario WHERE ra = ?";
         
         try{
-            st =con.createStatement();
-            st.execute(sql);
-            st.close();
+            pst = con.prepareStatement(sql);
+            pst.setString(1, usuario.getRa());
+            pst.execute();
+            pst.close();
+            
             return true;
             
         } catch (SQLException ex) {
@@ -63,10 +65,10 @@ public class UsuarioDaoImpl extends ConexaoBD implements UsuarioDao {
         String sql = "SELECT * FROM usuario WHERE nome = ? and senha = ?";
         
         try{
-            pst = this.con.prepareStatement(sql);
+            pst = con.prepareStatement(sql);
             pst.setString(1, usuario.getNome());
             pst.setString(2, usuario.getSenha());
-            rs = this.pst.executeQuery();
+            rs = pst.executeQuery();
             
             while(rs.next()){
                 return true;
@@ -90,15 +92,3 @@ public class UsuarioDaoImpl extends ConexaoBD implements UsuarioDao {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  

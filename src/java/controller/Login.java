@@ -21,14 +21,14 @@ public class Login extends HttpServlet {
       
          ServletContext sc = request.getServletContext();
          
+        //pega o valor inserido no formulario
          String nome = request.getParameter("nome");
          String senha = request.getParameter("senha");
-         
-        // String status = "";
          
          UsuarioDaoImpl UdaoImpl = new UsuarioDaoImpl();
          Usuario u = new Usuario();
          
+          //seta o valor do formulario na variavel
          u.setNome(nome);
          u.setSenha(senha);
          RequestDispatcher rd = null;
