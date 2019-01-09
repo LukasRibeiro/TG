@@ -3,9 +3,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Aeeeew ow porra</title>
+        <title>Pagina do usuario</title>
     </head>
     <body>
-        <h1>Funcionou porra</h1>
+        <h1>Funcionou, voce esta logado no sistema</h1>
     </body>
 </html>
