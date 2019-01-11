@@ -15,6 +15,6 @@ public class index extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         ServletContext sc = request.getServletContext();
-        sc.getRequestDispatcher("/jsp/index.jsp").forward(request, response);
+        sc.getRequestDispatcher("/jsp/cadastro.jsp").forward(request, response);
     }
 }
