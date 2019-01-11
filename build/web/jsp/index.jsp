@@ -5,8 +5,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="../css/bootstrap.css">
-        <link rel="stylesheet" href="../css/meuEstilo.css">
+        <link rel="stylesheet" href="/bootstrap.min.css">
+        <link rel="stylesheet" href="/meuEstilo.css">
         <title>Seja bem vindo - Login</title>
     </head>
     <body>
@@ -30,11 +30,11 @@
                 </center>
                 
                 <p class="text-center">Nao possui uma conta, então
-                    <a id="cadastro" href="/cadastro">Cadastre-se!</a>
+                    <a id="cadastro" href="/jsp/cadastro">Cadastre-se!</a>
                 </p>
                 
                 <p class="text-center"> deseja excluir sua conta,
-                    <a id="excluir" href="/excluir">clique aqui</a>
+                    <a id="excluir" href="/jsp/excluir">clique aqui</a>
                 </p>
             </form>
         </div>
