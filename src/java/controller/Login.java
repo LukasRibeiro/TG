@@ -44,24 +44,5 @@ public class Login extends HttpServlet {
              rd = request.getRequestDispatcher("/jsp/index.jsp");
              rd.forward(request, response);
          }
-         
-        /* 
-         UsuarioDao loginUsuario;
-         loginUsuario = new UsuarioDaoImpl();
-         
-         Usuario u = new Usuario();
-         u.setNome(nome);
-         u.setSenha(senha);
-         
-         Usuario u = loginUsuario.findByNomeUsuario(u);
-         
-         if(u.getNome().equals(nome) && u.getSenha().equals(senha)){
-            sc.getRequestDispatcher("/jsp/user.jsp").forward(request, response);
-         }
-         else{
-            request.setAttribute("falhaAutenticacao", true);
-            sc.getRequestDispatcher("/jsp/index.jsp").forward(request, response);           
-        }   
-         }*/
     }
 }

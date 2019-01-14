@@ -7,9 +7,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/meuEstilo.css">
+        
         <title>Cadastre-se</title>
     </head>
     <body>
+        <script src="../js/vazio.js"></script>
         <div class="container">
             <form action="/cadastro" method = "POST">
                 <h3 class="mb-5">Cadastre-se!</h3>
@@ -33,7 +35,7 @@
                     <span style="color:red">Nao compartilhe sua senha com outras pessoas!</span>
                 </div>
                 
-                <button class="botao mt-3" type="submit">Cadastrar</button>
+                <button class="botao mt-3" type="submit"  onclik ="vazio()">Cadastrar</button>
             </form>
         </div>
     </body>
