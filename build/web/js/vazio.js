@@ -5,37 +5,20 @@ function vazio(){
     var ra = $('#ra').val();
     var senha = $('#senha').val();
     
-    /*pagina de login*/
+    /*pagina de cadastro*/
     
     if (usuario === ''){
         alert('campo "usuario" deve ser preenchido!');
     }
     else if (ra === ''){
-        alert('campo "senha" deve ser preenchido!');
+        alert('campo "ra" deve ser preenchido!');
     }
     
      else if (senha === ''){
         alert('campo "senha" deve ser preenchido!');
     }
     
-    else if (usuario ==='' && ra === '' && senha == ''){
-        alert('Por favor, todos os campos nao podem estar vazios!');
+    else{
+        alert('Por favor, os campos nao podem estar vazios!');
     }
 }
-
-/*Verifica os campos vazios da pagina de cria��o do usuario 
-
-function confirma(){
-
-    let usuario = ('#usuario').val();
-    let senha = ('#senha').val();
-
-    if (usuario == ''){
-        $('#erro').html('Campo "usuario" deve ser preenchido!');
-    }
-    else if(senha == ''){
-        $('#erro').html('Campo "senha" deve ser preenchido!');
-    }
-}
-
-*/

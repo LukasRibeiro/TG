@@ -13,11 +13,13 @@
          <div>
             <form class="col-md-6 offset-md-3 jumbotron mt-5" action="/excluir" method = "POST">
             <!--Ra-->
+            <h3>Excluir conta!</h3>
+            <label>Insira seu numero de RA para excluir a conta!</label>
             <div class="form-group">
                 <label>Ra:</label>
                 <input type="text" class="form-control" name="ra" placeholder="Ra">
             </div>
-                <button class="botao mt-3" type="submit">Excluir</button>
+                <button id="excluir" class="botao mt-3" type="submit">Excluir</button>
             </form>
         </div>
     </body>

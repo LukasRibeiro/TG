@@ -12,9 +12,10 @@
     </head>
     <body>
         <div class="container">
-            <form class="col-md-6 offset-md-3 jumbotron mt-5" action="/login" method="POST">
+            <form class="col-md-5 offset-md-3 jumbotron mt-5" action="/login" method="POST">
                 
                 <div class="form-group">
+                    <h3>Login!</h3>
                     <!-- Nome de usuario-->
                     <label>Usuario:</label>
                     <input type="text" class="form-control" name="nome" placeholder="Nome">
@@ -30,12 +31,12 @@
                     <button class="botao mt-3" type="submit">Acessar</button>
                 </center>
                 
-                <p class="text-center">Nao possui uma conta, então
+                <p class="text-center mt-3">Nao possui uma conta? Então
                     <a id="cadastro" href="/jsp/cadastro.jsp">Cadastre-se!</a>
                 </p>
                 
-                <p class="text-center"> deseja excluir sua conta,
-                    <a id="excluir" href="/jsp/excluir.jsp">clique aqui</a>
+                <p class="text-center"> Deseja excluir sua conta,
+                    <a id="" href="/jsp/excluir.jsp">Clique aqui!</a>
                 </p>
             </form>
         </div>
