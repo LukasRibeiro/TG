@@ -1,19 +1,25 @@
 /* verifica campo de preenchimento vazio no index*/
 function vazio(){
 
-    var usuario = $('#usuario').val();
-    var senha = $('#Senha').val();
+    var usuario = $('#nome').val();
+    var ra = $('#ra').val();
+    var senha = $('#senha').val();
     
     /*pagina de login*/
     
     if (usuario === ''){
         alert('campo "usuario" deve ser preenchido!');
     }
-    else if (senha === ''){
+    else if (ra === ''){
         alert('campo "senha" deve ser preenchido!');
     }
-    else if (usuario ==='' && senha === ''){
-        alert('Por favor, ambos os campos nao podem estar vazios!');
+    
+     else if (senha === ''){
+        alert('campo "senha" deve ser preenchido!');
+    }
+    
+    else if (usuario ==='' && ra === '' && senha == ''){
+        alert('Por favor, todos os campos nao podem estar vazios!');
     }
 }
 
