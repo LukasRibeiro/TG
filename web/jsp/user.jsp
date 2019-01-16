@@ -7,19 +7,6 @@
         <title>Pagina do usuario</title>
     </head>
     <body>
-        
-        <%/*
-            response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); //http 1.1
-            
-            response.setHeader("progma", "no-cache");// http 1.0
-            
-            response.setHeader("Expires", "0");// proxies
-            
-            if(session.getAttribute("user")== null)
-                response.sendRedirect("/jsp/index.jsp");
-        
-       */ %>
-        
         <h1>Funcionou, voce esta logado no sistema</h1>
         
         <form action="/logout" method="GET">

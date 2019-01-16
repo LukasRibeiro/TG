@@ -18,12 +18,13 @@ public class logout extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out=response.getWriter();
         
-        request.getRequestDispatcher("jsp/index.jsp").include(request, response);
-        
         HttpSession session=request.getSession(false);
         session.invalidate();
         
-        out.print("You are successfully logged out!");
+        request.getRequestDispatcher("jsp/index.jspinclude(request, response");
+
+        out.close();
+        
         /*
         response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); //http 1.1
 
@@ -31,7 +32,6 @@ public class logout extends HttpServlet {
             
         response.setHeader("Expires", "0");// proxies
         */
-        out.close();
     }
 
     @Override
