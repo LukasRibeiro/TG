@@ -7,16 +7,32 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet(name = "logout", urlPatterns = {"/logout"})
 public class logout extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        
+        response.setContentType("text/html");
+        PrintWriter out=response.getWriter();
+        
+        request.getRequestDispatcher("jsp/index.jsp").include(request, response);
+        
+        HttpSession session=request.getSession(false);
+        session.invalidate();
+        
+        out.print("You are successfully logged out!");
+        /*
+        response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); //http 1.1
 
+        response.setHeader("progma", "no-cache");// http 1.0
+            
+        response.setHeader("Expires", "0");// proxies
+        */
+        out.close();
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

@@ -72,11 +72,6 @@ public class UsuarioDaoImpl extends ConexaoBD implements UsuarioDao {
             
             while(rs.next()){
                 return true;
-                /*
-                usuario.setId(this.rs.getInt("id"));
-                usuario.setNome(this.rs.getString("nome"));
-                usuario.setRa(this.rs.getString("ra"));
-                usuario.setSenha(this.rs.getString("senha")); */
             }
             this.fechaBanco(con, pst, rs);
             
