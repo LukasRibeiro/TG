@@ -3,12 +3,16 @@ package controller;
 import dao.UsuarioDao;
 import daoImpl.UsuarioDaoImpl;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.Usuario;
 
 @WebServlet(urlPatterns = {"/cadastro"})
@@ -37,11 +41,23 @@ public class Cadastro extends HttpServlet {
         status = novoUsuario.inserir(usuario);
         
        if(status){
-            sc.getRequestDispatcher("/jsp/index.jsp").forward(request, response);
+            response.sendRedirect("/");
        }
         else {
             request.setAttribute("erroNoCadastro", 1);
-            sc.getRequestDispatcher("/jsp/cadastro.jsp").forward(request, response);
+            response.sendRedirect("/cadastro");
+       }
+    }
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException, IOException, IOException{
+        
+        RequestDispatcher rd = null;
+            
+         rd = request.getRequestDispatcher("/jsp/cadastro.jsp");
+        try{
+            rd.forward(request, response);
+        } catch (IOException ex) {
+            Logger.getLogger(Cadastro.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-}
+    }

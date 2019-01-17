@@ -3,6 +3,8 @@ package controller;
 import dao.UsuarioDao;
 import daoImpl.UsuarioDaoImpl;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -33,13 +35,23 @@ public class Excluir extends HttpServlet {
     if(excluirUsuario.Excluir(u) == true){
         HttpSession sessao = request.getSession();
         sessao.setAttribute("usuario", u);
-        rd = request.getRequestDispatcher("/jsp/index.jsp");
-        rd.forward(request, response);
+        response.sendRedirect("/");
     }
     else{
         request.setAttribute("mensagem", "erro ao excluir usuario");
-        rd = request.getRequestDispatcher("/jsp/excluir.jsp");
-        rd.forward(request, response);
+        response.sendRedirect("/excluir");
     }
+    }
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException{
+        RequestDispatcher rd = null;
+            
+         rd = request.getRequestDispatcher("/jsp/excluir.jsp");
+        try{
+            rd.forward(request, response);
+        } catch (IOException ex) {
+            Logger.getLogger(Cadastro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
     }
 }

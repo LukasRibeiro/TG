@@ -32,11 +32,11 @@
                 </center>
                 
                 <p class="text-center mt-3">Nao possui uma conta? Então
-                    <a id="cadastro" href="/jsp/cadastro.jsp">Cadastre-se!</a>
+                    <a id="cadastro" href="/cadastro">Cadastre-se!</a>
                 </p>
                 
                 <p class="text-center"> Deseja excluir sua conta,
-                    <a id="" href="/jsp/excluir.jsp">Clique aqui!</a>
+                    <a id="" href="/excluir">Clique aqui!</a>
                 </p>
             </form>
         </div>

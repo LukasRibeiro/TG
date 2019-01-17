@@ -14,16 +14,11 @@ public class logout extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        
-        response.setContentType("text/html");
-        PrintWriter out=response.getWriter();
-        
+         
         HttpSession session=request.getSession(false);
         session.invalidate();
         
-        request.getRequestDispatcher("jsp/index.jspinclude(request, response");
-
-        out.close();
+        response.sendRedirect("/");
         
         /*
         response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); //http 1.1
@@ -48,5 +43,4 @@ public class logout extends HttpServlet {
     private void processRequest(HttpServletRequest request, HttpServletResponse response) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 }

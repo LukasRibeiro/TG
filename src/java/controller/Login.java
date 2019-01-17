@@ -1,6 +1,5 @@
 package controller;
 
-import dao.UsuarioDao;
 import daoImpl.UsuarioDaoImpl;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -37,12 +36,14 @@ public class Login extends HttpServlet {
              HttpSession sessao = request.getSession();
              sessao.setAttribute("usuario", u);
              rd = request.getRequestDispatcher("/jsp/user.jsp");
-             rd.forward(request, response);
+             //rd.forward(request, response);
+             response.sendRedirect("/home");
          }
          else{
              request.setAttribute("mensagem", "usuario ou senha invalidos");
              rd = request.getRequestDispatcher("/jsp/index.jsp");
-             rd.forward(request, response);
+             //rd.forward(request, response);
+             response.sendRedirect("/");
          }
     }
 }
