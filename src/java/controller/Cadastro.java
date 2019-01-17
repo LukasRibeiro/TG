@@ -12,7 +12,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import model.Usuario;
 
 @WebServlet(urlPatterns = {"/cadastro"})
@@ -41,7 +40,8 @@ public class Cadastro extends HttpServlet {
         status = novoUsuario.inserir(usuario);
         
        if(status){
-            response.sendRedirect("/");
+           request.setAttribute("statusCadastro", "'ok'");
+           sc.getRequestDispatcher("/jsp/index.jsp").forward(request, response);       
        }
         else {
             request.setAttribute("erroNoCadastro", 1);
@@ -60,4 +60,4 @@ public class Cadastro extends HttpServlet {
             Logger.getLogger(Cadastro.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    }
+}

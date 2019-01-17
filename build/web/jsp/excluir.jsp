@@ -22,5 +22,14 @@
                 <button id="excluir" class="botao mt-3" type="submit">Excluir</button>
             </form>
         </div>
+        <!--
+        <script>
+            
+            var excluir = <%= request.getAttribute("statusExcluir")%>
+            if(excluir){
+                alert("Excluido com sucesso!");
+            }
+        </script>
+           -->
     </body>
 </html>

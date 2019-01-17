@@ -35,6 +35,8 @@ public class Excluir extends HttpServlet {
     if(excluirUsuario.Excluir(u) == true){
         HttpSession sessao = request.getSession();
         sessao.setAttribute("usuario", u);
+        //arrumar esta parte para aparecer o alert
+        //request.setAttribute("statusExcluir", '1');
         response.sendRedirect("/");
     }
     else{

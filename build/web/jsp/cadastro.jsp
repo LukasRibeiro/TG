@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="../css/meuEstilo.css">
         <title>Cadastro</title>
     </head>
-    <body
+    <body>
         <div class="container">
             <form class="col-md-5 offset-md-3 jumbotron mt-5" action="/cadastro" method = "POST">
                 
@@ -31,9 +31,8 @@
                 <div class="form-group">
                     <label>Senha:</label>
                     <input type="password" class="form-control" name="senha" placeholder="Senha" required="required">
-                    <span style="color:red">Nao compartilhe sua senha com outras pessoas!</span>
+                    <span>Nao compartilhe sua senha com outras pessoas!</span>
                 </div>
-                
                 <button class="botao mt-3" type="submit" onclik ="vazio()">Cadastrar</button>
             </form>
         </div>

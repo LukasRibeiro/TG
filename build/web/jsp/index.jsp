@@ -11,6 +11,7 @@
         <title>Seja bem vindo - Login</title>
     </head>
     <body>
+  
         <div class="container">
             <form class="col-md-5 offset-md-3 jumbotron mt-5" action="/login" method="POST">
                 
@@ -40,5 +41,12 @@
                 </p>
             </form>
         </div>
+        <script>
+            var cadastrou = <%= request.getAttribute("statusCadastro")%>
+            if(cadastrou){
+                alert("Cadastrado com Sucesso!");
+            }
+        </script>
     </body>
+    
 </html>
