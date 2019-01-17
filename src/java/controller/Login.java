@@ -35,14 +35,10 @@ public class Login extends HttpServlet {
          if(UdaoImpl.findByNomeUsuario(u) == true){
              HttpSession sessao = request.getSession();
              sessao.setAttribute("usuario", u);
-             rd = request.getRequestDispatcher("/jsp/user.jsp");
-             //rd.forward(request, response);
              response.sendRedirect("/home");
          }
          else{
              request.setAttribute("mensagem", "usuario ou senha invalidos");
-             rd = request.getRequestDispatcher("/jsp/index.jsp");
-             //rd.forward(request, response);
              response.sendRedirect("/");
          }
     }

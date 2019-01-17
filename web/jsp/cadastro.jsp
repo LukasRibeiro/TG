@@ -9,33 +9,7 @@
         <link rel="stylesheet" href="../css/meuEstilo.css">
         <title>Cadastro</title>
     </head>
-    <body>
-        <script>
-            /* verifica campo de preenchimento vazio no cadastro*/
-            function vazio(){
-
-                var nome = $('#nome').val();
-                var ra = $('#ra').val();
-                var senha = $('#senha').val();
-
-                /*pagina de cadastro*/
-
-                if (nome == ''){
-                    alert('campo "usuario" deve ser preenchido!');
-                }
-                else if (ra == ''){
-                    alert('campo "ra" deve ser preenchido!');
-                }
-
-                 else if (senha == ''){
-                    alert('campo "senha" deve ser preenchido!');
-                }
-
-                else{
-                    alert('Por favor, os campos nao podem estar vazios!');
-                }
-            }
-        </script>
+    <body
         <div class="container">
             <form class="col-md-5 offset-md-3 jumbotron mt-5" action="/cadastro" method = "POST">
                 
@@ -44,19 +18,19 @@
                 <!-- Nome de usuario-->
                 <div class="form-group">
                     <label>Usuario:</label>
-                    <input type="text" class="form-control" name="nome" placeholder="Nome">
+                    <input type="text" class="form-control" name="nome" placeholder="Nome" required="required">
                 </div>
 
                 <!--Ra-->
                 <div class="form-group">
                     <label>Ra:</label>
-                    <input type="text" class="form-control" name="ra" placeholder="Ra">
+                    <input type="text" class="form-control" name="ra" placeholder="Ra" required="required">
                 </div>
 
                 <!-- senha-->
                 <div class="form-group">
                     <label>Senha:</label>
-                    <input type="password" class="form-control" name="senha" placeholder="Senha">
+                    <input type="password" class="form-control" name="senha" placeholder="Senha" required="required">
                     <span style="color:red">Nao compartilhe sua senha com outras pessoas!</span>
                 </div>
                 

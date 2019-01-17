@@ -51,7 +51,7 @@ public class Cadastro extends HttpServlet {
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException, IOException, IOException{
         
-        RequestDispatcher rd = null;
+        RequestDispatcher rd;
             
          rd = request.getRequestDispatcher("/jsp/cadastro.jsp");
         try{

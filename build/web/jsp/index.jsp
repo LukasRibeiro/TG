@@ -18,13 +18,13 @@
                     <h3>Login!</h3>
                     <!-- Nome de usuario-->
                     <label>Usuario:</label>
-                    <input type="text" class="form-control" name="nome" placeholder="Nome">
+                    <input type="text" class="form-control" name="nome" placeholder="Nome" required="required">
                 </div>
 
                 <div class="form-group">
                     <!-- senha-->
                     <label>Senha:</label>
-                    <input type="password" class="form-control" name="senha" placeholder="Senha">
+                    <input type="password" class="form-control" name="senha" placeholder="Senha" required="required">
                 </div>
                 
                 <center>
