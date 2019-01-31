@@ -1,0 +1,7 @@
+duvidas para tirar com o prof
+
+como deve ficar o codigo de extrair os dados? se deve ficar realmente na aplicação.
+
+como deve ficar o banco de dados?
+
+como
