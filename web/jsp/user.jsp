@@ -8,17 +8,18 @@
     </head>
     <body>
         
-         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-            <a class="navbar-brand" href="#">Pagina Inicial</a>
-            <a href= ""> <img src=""></a> 
-         </nav>
-        
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">Pagina inicial</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                   
+            <form class="form-inline" action="/logout" method="GET">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">sair</button>
+            </form>
+        </nav>
+
         <h1>Funcionou voce esta logado</h1>
-        
-        <form action="/logout" method="GET">
-            <button class="botao mt-3">logout</button>
-        </form
-        
         
     </body>
 </html>
