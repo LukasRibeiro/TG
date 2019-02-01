@@ -7,10 +7,18 @@
         <title>Pagina do usuario</title>
     </head>
     <body>
-        <h1>Funcionou, voce esta logado no sistema</h1>
+        
+         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">Pagina Inicial</a>
+            <a href= ""> <img src=""></a> 
+         </nav>
+        
+        <h1>Funcionou voce esta logado</h1>
         
         <form action="/logout" method="GET">
             <button class="botao mt-3">logout</button>
-        </form>
+        </form
+        
+        
     </body>
 </html>
